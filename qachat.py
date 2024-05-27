@@ -8,6 +8,7 @@ import google.generativeai as genai
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 #Function to load Gemini pro model and get response
+
 model=genai.GenerativeModel("gemini-pro")
 chat=model.start_chat(history=[])
 
@@ -16,8 +17,9 @@ def get_gemini_response(question):
     return response
 
 ##Initialize our streamlit app
+
 st.set_page_config(page_title="Q&A Demo")
-st.header("Gemini LLm Application")
+st.header("Gemini LLM Application")
 
 #Initialize session state for chat history if it doesn't exist
 if 'chat_history' not in st.session_state:
