@@ -22,7 +22,7 @@ def input_pdf_text(uploaded_file):
         text+=str(page.extract_text())
     return text
 
-#Prompt Template
+# A custom made prompt
 
 input_prompt="""
 Hey Act Like a skilled or very experience ATS(Application Tracking System)
@@ -39,7 +39,7 @@ I want the response in one single string having the structure
 {{"JD Match":"%","MissingKeywords:[]","Profile Summary":""}}
 """
 
-## streamlit app
+## streamlit app interface...
 st.title("Smart ATS")
 st.text("Improve Your Resume ATS")
 jd=st.text_area("Paste the Job Description")
